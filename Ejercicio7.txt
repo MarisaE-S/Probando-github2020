@@ -1,0 +1,35 @@
+
+package unidad6_1_7;
+
+import javax.swing.JOptionPane;
+
+public class Unidad6_1_7 {
+    public static void main(String[] args) {
+        // 7-Realizar un programa que almacene 5 números en un vector
+        //y al final indique cuáles fueron el menor y el mayor de los números ingresados.
+        int [] numeros=new int[5];
+        int menor;
+        int mayor;
+        JOptionPane.showMessageDialog(null, "Ingresa 5 números y sabrás cual de ellos\n"+
+                                            "es el mayor y cual es el menor");
+        
+        for(int i=0;i<numeros.length;i++){
+            numeros[i]=Integer.parseInt(JOptionPane.showInputDialog("Ingresa un número"));
+            
+        }
+       menor= numeros[0];
+       mayor=numeros[0];
+        for(int i=1;i<numeros.length-1;i++){
+              if(menor>numeros[i]){
+                  menor=numeros[i];
+              }
+              if(mayor<numeros[i]){
+                  mayor=numeros[i];
+              }
+        }
+        JOptionPane.showMessageDialog(null, "El menor es : "+menor+"\n"+
+                                       "el mayor es : "+mayor);
+        System.exit(0);
+    }
+    
+}
