@@ -1,0 +1,21 @@
+package unidad6_1_5;
+
+import javax.swing.JOptionPane;
+
+public class Unidad6_1_5 {
+    public static void main(String[] args) {
+        // 5-Desarrollar un programa que permita al usuario ingresar 20 números, 
+        //los muestre por pantalla y obtenga la suma de todos.
+        int numeros[] = new int[20];
+        int suma=0;
+        JOptionPane.showMessageDialog(null, "Vamos a ingresar 20 numeros y a obtener su suma");
+        for(int i=0;i<numeros.length;i++){
+            
+            numeros[i]=Integer.parseInt(JOptionPane.showInputDialog("Ingresa un número"));
+            suma=suma+numeros[i];
+        }
+         JOptionPane.showMessageDialog(null, "La suma de los 20 números ingresados es "+suma);
+        System.exit(0);
+    }
+    
+}
