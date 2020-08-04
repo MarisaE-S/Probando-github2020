@@ -1,0 +1,26 @@
+
+package unidad6_1_4;
+
+import javax.swing.JOptionPane;
+
+public class Unidad6_1_4 {
+    public static void main(String[] args) {
+        /* 4-Crear un Programa que pida al usuario un numero del 0 al 25, 
+         debera mostar por pantalla su significado en la quiniela*/
+        String[]loteria = {"Huevos", "Agua", "Niño", "San Cono", "La Cama", "Gato", "Perro", "Revolver", "Incendio", "Arroyo", "La leche", "Palito", "Soldado", "La yeta", "Borracho", "Niña bonita", "Anillo", "Desgracia", "Sangre", "Pescado", "La fiesta", "La mujer", "El loco", "Mariposa", "Caballo", "Gallina"};
+        int numero;
+        numero = Integer.parseInt(JOptionPane.showInputDialog("Digite un número  entre 1 y 25\n"+
+                                                        " para saber su significado en la lotería"));
+        
+           if (numero >0 && numero < 26){
+               
+                     JOptionPane.showMessageDialog(null, "El número "+numero+" significa "+loteria[numero]);
+                    
+           }else{
+               JOptionPane.showMessageDialog(null, "El dígito ingresado no está dentro del rango");
+           }
+          System.exit(0);
+       
+    }
+    
+}
